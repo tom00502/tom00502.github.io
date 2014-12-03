@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>C# 語法備記 | 寶哥在研究</title>
+    <title>寶哥在研究</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="陳小寶">
     
-    <meta name="description" content="很久以前就想碰C#了，剛好現在工作上需要用到，在感受他強大的威力之前，先來了解一下基本語法吧!">
+    <meta name="description" content="title: IndexOf獲得物件在陣列中的索引值comments: truedate: 2014-12-03 10:53:24tags:[C# , 陣列]
+categories:
+如何知道物件在陣列中的索引值呢?可以使用Array.IndexOf">
     
     
     
@@ -67,15 +69,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/02/C-語法備記/" title="C# 語法備記" itemprop="url">C# 語法備記</a>
+      <a href="/2014/12/03/IndexOf獲得物件在陣列中的索引值/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
     
       <a href="http://tom00502.github.io" title="陳小寶">陳小寶</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-12-02T10:54:42.000Z" itemprop="datePublished">Dec 2 2014</time>
-    Updated:<time datetime="2014-12-02T11:30:00.000Z" itemprop="dateModified">Dec 2 2014</time>
+    <time datetime="2014-12-03T02:53:24.000Z" itemprop="datePublished">Dec 3 2014</time>
+    Updated:<time datetime="2014-12-03T03:01:39.000Z" itemprop="dateModified">Dec 3 2014</time>
     
   </p>
 </header>
@@ -85,69 +87,26 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Array"><span class="toc-number">1.</span> <span class="toc-text">Array</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Foreach"><span class="toc-number">2.</span> <span class="toc-text">Foreach</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#List"><span class="toc-number">3.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-number">4.</span> <span class="toc-text">Class</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:"><span class="toc-number">1.</span> <span class="toc-text">categories:</span></a></li></ol>
 		</div>
 		
-		<p>很久以前就想碰C#了，剛好現在工作上需要用到，在感受他強大的威力之前，先來了解一下基本語法吧!</p>
-<a id="more"></a>
-
-<h1 id="Array">Array</h1>
-<p>建立一個陣列空間</p>
-<p>資料型態[] 陣列名稱 = new 資料型態[陣列大小];<br>建立一個長度為5的整數陣列</p>
-<pre><code><span class="keyword">int</span>[] IntArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
-</code></pre><p>建立陣列並給初始值</p>
-<pre><code><span class="keyword">int</span>[] IntArray = <span class="keyword">new</span> <span class="keyword">int</span>[]{<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>};
-</code></pre><h1 id="Foreach">Foreach</h1>
-<p>取出陣列中每個內容</p>
-<pre><code><span class="keyword">foreach</span> ( <span class="keyword">var</span> i <span class="keyword">in</span> x){
-    <span class="comment">// i = 陣列內容</span>
-    <span class="comment">// x = 陣列</span>
-}
-</code></pre><h1 id="List">List</h1>
-<p>建立一個List<br>List&lt;資料型態&gt; list1 = new List&lt;資料型態&gt;();</p>
-<p>建立一個Image List</p>
-<pre><code><span class="keyword">List</span>&lt;<span class="keyword">Image</span>&gt; ListName = new <span class="keyword">List</span>&lt;<span class="keyword">Image</span>&gt;();
-</code></pre><p>List使用</p>
-<pre><code>ListName.Add(<span class="keyword">object</span>);    <span class="comment">//將object加入List中</span>
-ListName.Count ;         <span class="comment">//取得目前List內容數量</span>
-</code></pre><h1 id="Class">Class</h1>
-<p>要自己建立Class 直接寫在主要Class 下面就可以用了<br>不可以寫在上面</p>
-<pre><code>namespace text1
-{
-    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> UserControl1 : UserControl
-    {
-        <span class="keyword">public</span> <span class="title">UserControl1</span>()
-        {
-            InitializeComponent();
-
-        }
-
-    }
-    class MyClass {
-
-        <span class="comment">//your code</span>
-    }
-}
+		<p>title: IndexOf獲得物件在陣列中的索引值<br>comments: true<br>date: 2014-12-03 10:53:24<br>tags:[C# , 陣列]</p>
+<h2 id="categories:">categories:</h2>
+<p>如何知道物件在陣列中的索引值呢?<br>可以使用Array.IndexOf<br><a id="more"></a></p>
+<p>索引值 = Array.IndexOf( 陣列名稱 , 陣列元素);<br>e.g.</p>
+<pre><code><span class="keyword">int</span>[] IntArray = <span class="keyword">new</span> <span class="keyword">int</span>[] { <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span> };
+<span class="keyword">int</span> n = Array.IndexOf(IntArray, <span class="number">20</span>);
+<span class="comment">//n = 1</span>
 </code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/C-語法/">C# 語法</a>
-  </div>
-
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/C/">C#</a>
-</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://tom00502.github.io/2014/12/02/C-語法備記/" data-title="C# 語法備記 | 寶哥在研究" data-tsina="null" class="share clearfix">
+  <div data-url="http://tom00502.github.io/2014/12/03/IndexOf獲得物件在陣列中的索引值/" data-title="寶哥在研究" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -156,19 +115,11 @@ ListName.Count ;         <span class="comment">//取得目前List內容數量</s
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/12/03/IndexOf獲得物件在陣列中的索引值/" title="">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  (no title)</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/12/01/markdown/"  title="Markdown 語法備記">
+<a href="/2014/12/02/C-語法備記/"  title="C# 語法備記">
  <strong>NEXT:</strong><br/> 
- <span>Markdown 語法備記
+ <span>C# 語法備記
 </span>
 </a>
 </div>
@@ -181,7 +132,7 @@ ListName.Count ;         <span class="comment">//取得目前List內容數量</s
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Array"><span class="toc-number">1.</span> <span class="toc-text">Array</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Foreach"><span class="toc-number">2.</span> <span class="toc-text">Foreach</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#List"><span class="toc-number">3.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-number">4.</span> <span class="toc-text">Class</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:"><span class="toc-number">1.</span> <span class="toc-text">categories:</span></a></li></ol>
   </div>
 
 <div id="asidepart">
