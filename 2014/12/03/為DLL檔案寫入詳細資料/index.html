@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | 寶哥在研究</title>
+    <title>為DLL檔案寫入詳細資料 | 寶哥在研究</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="陳小寶">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="有時候我們會編寫動態連結檔供其他程式來使用但是檔案放久了，可能會忘記他是做什麼的，或者有版本變動後，不知道是哪一個版本">
     
     
     
@@ -67,15 +67,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/11/28/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2014/12/03/為DLL檔案寫入詳細資料/" title="為DLL檔案寫入詳細資料" itemprop="url">為DLL檔案寫入詳細資料</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://tom00502.github.io" title="陳小寶">陳小寶</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-11-28T08:19:10.000Z" itemprop="datePublished">Nov 28 2014</time>
-    Updated:<time datetime="2014-11-28T08:19:10.000Z" itemprop="dateModified">Nov 28 2014</time>
+    <time datetime="2014-12-03T06:28:46.000Z" itemprop="datePublished">Dec 3 2014</time>
+    Updated:<time datetime="2014-12-03T07:06:11.000Z" itemprop="dateModified">Dec 3 2014</time>
     
   </p>
 </header>
@@ -85,37 +85,68 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1"><span class="toc-number">1.</span> <span class="toc-text">Step1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2"><span class="toc-number">2.</span> <span class="toc-text">Step2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3"><span class="toc-number">3.</span> <span class="toc-text">Step3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step4"><span class="toc-number">4.</span> <span class="toc-text">Step4</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有空再研究"><span class="toc-number"></span> <span class="toc-text">有空再研究</span></a>
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+		<p>有時候我們會編寫動態連結檔供其他程式來使用<br>但是檔案放久了，可能會忘記他是做什麼的，或者有版本變動後，不知道是哪一個版本</p>
+<a id="more"></a>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>寶哥就發現了在DLL檔案內容中這裡似乎可以填寫</p>
+<p><img src="/image/p1.png" alt="圖1"></p>
+<p>那麼要怎麼把資訊寫進去呢?</p>
+<p>其實他是藏在VS_VERSION_INFO這個資源檔裡面<br>一般建立專案時並不會有這一個資源，必須手動加入</p>
+<h4 id="Step1">Step1</h4>
+<p>在資源資料夾按右鍵加入一個新資源</p>
+<p><img src="/image/p2.png" alt="圖2"></p>
+<h4 id="Step2">Step2</h4>
+<p>選擇Version</p>
+<p><img src="/image/p3.png" alt="圖3"></p>
+<h4 id="Step3">Step3</h4>
+<p>裡面大概有這些資訊可以填寫</p>
+<p><img src="/image/p4.png" alt="圖4"></p>
+<h4 id="Step4">Step4</h4>
+<p>填寫好後重新編譯就大功告成了!!</p>
+<hr>
+<p>對應的欄位參考</p>
+<p><img src="/image/p5.png" alt="圖5"></p>
+<h3 id="有空再研究">有空再研究</h3>
+<p>我建立的專案是CLR的應用程式庫<br>在原始程式檔下發現了AssemblyInfo.cpp這個檔案<br>內容大概長這樣子</p>
+<pre><code><span class="comment">//</span>
+<span class="comment">// 組件的一般資訊是由下列的屬性集控制。</span>
+<span class="comment">// 變更這些屬性的值即可修改組件的相關</span>
+<span class="comment">// 資訊。</span>
+<span class="comment">//</span>
+[assembly:AssemblyTitleAttribute(<span class="string">"MyDll"</span>)];
+[assembly:AssemblyDescriptionAttribute(<span class="string">""</span>)];
+[assembly:AssemblyConfigurationAttribute(<span class="string">""</span>)];
+[assembly:AssemblyCompanyAttribute(<span class="string">""</span>)];
+[assembly:AssemblyProductAttribute(<span class="string">"MyDll"</span>)];
+[assembly:AssemblyCopyrightAttribute(<span class="string">"Copyright (c)  2014"</span>)];
+[assembly:AssemblyTrademarkAttribute(<span class="string">""</span>)];
+[assembly:AssemblyCultureAttribute(<span class="string">""</span>)];
+</code></pre><p>看起來也是寫版本資訊的地方!<br>不過不管我怎麼填都沒有用，到底這裡的資訊會顯示在哪裡?<br>再研究吧</p>
+<hr>
+<p>VS_VERSION_INFO有很多欄位在詳細資料並沒有顯示出來<br>那麼到底要在哪裡看?有什麼作用?</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/vc/">vc++</a><a href="/tags/dll/">dll</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/vc/">vc++</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://tom00502.github.io/2014/11/28/hello-world/" data-title="Hello World | 寶哥在研究" data-tsina="null" class="share clearfix">
+  <div data-url="http://tom00502.github.io/2014/12/03/為DLL檔案寫入詳細資料/" data-title="為DLL檔案寫入詳細資料 | 寶哥在研究" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -124,14 +155,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/11/28/123/" title="第一篇">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  第一篇</span>
+
+<div class="next">
+<a href="/2014/12/03/IndexOf獲得物件在陣列中的索引值/"  title="IndexOf 獲得物件在陣列中的索引值">
+ <strong>NEXT:</strong><br/> 
+ <span>IndexOf 獲得物件在陣列中的索引值
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -141,7 +172,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1"><span class="toc-number">1.</span> <span class="toc-text">Step1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2"><span class="toc-number">2.</span> <span class="toc-text">Step2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3"><span class="toc-number">3.</span> <span class="toc-text">Step3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step4"><span class="toc-number">4.</span> <span class="toc-text">Step4</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有空再研究"><span class="toc-number"></span> <span class="toc-text">有空再研究</span></a>
   </div>
 
 <div id="asidepart">
