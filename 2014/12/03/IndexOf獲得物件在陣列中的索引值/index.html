@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>寶哥在研究</title>
+    <title>IndexOf 獲得物件在陣列中的索引值 | 寶哥在研究</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="陳小寶">
     
-    <meta name="description" content="title: IndexOf獲得物件在陣列中的索引值comments: truedate: 2014-12-03 10:53:24tags:[C# , 陣列]
-categories:
-如何知道物件在陣列中的索引值呢?可以使用Array.IndexOf">
+    <meta name="description" content="如何知道物件在陣列中的索引值呢?可以使用Array.IndexOf">
     
     
     
@@ -69,7 +67,7 @@ categories:
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/03/IndexOf獲得物件在陣列中的索引值/" title="" itemprop="url"></a>
+      <a href="/2014/12/03/IndexOf獲得物件在陣列中的索引值/" title="IndexOf 獲得物件在陣列中的索引值" itemprop="url">IndexOf 獲得物件在陣列中的索引值</a>
   </h1>
   <p class="article-author">By
     
@@ -77,7 +75,7 @@ categories:
     </p>
   <p class="article-time">
     <time datetime="2014-12-03T02:53:24.000Z" itemprop="datePublished">Dec 3 2014</time>
-    Updated:<time datetime="2014-12-03T03:01:39.000Z" itemprop="dateModified">Dec 3 2014</time>
+    Updated:<time datetime="2014-12-03T05:16:57.000Z" itemprop="dateModified">Dec 3 2014</time>
     
   </p>
 </header>
@@ -87,26 +85,36 @@ categories:
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:"><span class="toc-number">1.</span> <span class="toc-text">categories:</span></a></li></ol>
+		
 		</div>
 		
-		<p>title: IndexOf獲得物件在陣列中的索引值<br>comments: true<br>date: 2014-12-03 10:53:24<br>tags:[C# , 陣列]</p>
-<h2 id="categories:">categories:</h2>
-<p>如何知道物件在陣列中的索引值呢?<br>可以使用Array.IndexOf<br><a id="more"></a></p>
+		<p>如何知道物件在陣列中的索引值呢?<br>可以使用Array.IndexOf<br><a id="more"></a></p>
 <p>索引值 = Array.IndexOf( 陣列名稱 , 陣列元素);<br>e.g.</p>
 <pre><code><span class="keyword">int</span>[] IntArray = <span class="keyword">new</span> <span class="keyword">int</span>[] { <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span> };
 <span class="keyword">int</span> n = Array.IndexOf(IntArray, <span class="number">20</span>);
 <span class="comment">//n = 1</span>
-</code></pre>  
+</code></pre><p>有什麼好處呢?</p>
+<p>對於同樣功能的按鈕，可能只是一些變數不一樣，動作都相同<br>可以先把這些按鈕放入一個陣列中<br>把這些按鈕的事件綁在同一個副程式，再利用sender配合Array.IndexOf來確定使用者按下哪一個按鈕<br>再做對應的動作，可以讓程式碼變得很簡潔<br>有空再補程式碼</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C#</a><a href="/tags/陣列/">陣列</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/C/">C#</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://tom00502.github.io/2014/12/03/IndexOf獲得物件在陣列中的索引值/" data-title="寶哥在研究" data-tsina="null" class="share clearfix">
+  <div data-url="http://tom00502.github.io/2014/12/03/IndexOf獲得物件在陣列中的索引值/" data-title="IndexOf 獲得物件在陣列中的索引值 | 寶哥在研究" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -132,7 +140,7 @@ categories:
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:"><span class="toc-number">1.</span> <span class="toc-text">categories:</span></a></li></ol>
+  
   </div>
 
 <div id="asidepart">
@@ -146,7 +154,7 @@ categories:
 		
 			<li><a href="/categories/BB/" title="BB">BB<sup>1</sup></a></li>
 		
-			<li><a href="/categories/C/" title="C#">C#<sup>1</sup></a></li>
+			<li><a href="/categories/C/" title="C#">C#<sup>2</sup></a></li>
 		
 			<li><a href="/categories/編輯/" title="編輯">編輯<sup>1</sup></a></li>
 		
@@ -161,9 +169,13 @@ categories:
 		
 			<li><a href="/tags/AA/" title="AA">AA<sup>1</sup></a></li>
 		
-			<li><a href="/tags/C-語法/" title="C# 語法">C# 語法<sup>1</sup></a></li>
+			<li><a href="/tags/C/" title="C#">C#<sup>2</sup></a></li>
 		
 			<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+		
+			<li><a href="/tags/語法/" title="語法">語法<sup>1</sup></a></li>
+		
+			<li><a href="/tags/陣列/" title="陣列">陣列<sup>1</sup></a></li>
 		
 		</ul>
 </div>
